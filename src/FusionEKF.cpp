@@ -78,8 +78,8 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
       */
 	  cout << "EKF: RADAR" << endl;
 	  float ro  = measurement_pack.raw_measurements_[0];
-      float theta = measurement_pack.raw_measurements_[1];
-      float ro_dot = measurement_pack.raw_measurements_[2];
+          float theta = measurement_pack.raw_measurements_[1];
+          float ro_dot = measurement_pack.raw_measurements_[2];
 	  ekf_.x_[0] = ro * cos(theta);
 	  ekf_.x_[1] = ro * sin(theta);
 	  //ekf_.x_[2] = ro_dot * cos(theta);
